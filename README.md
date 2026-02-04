@@ -49,3 +49,6 @@ xcodebuild -project DarwinSniffer.xcodeproj -scheme DarwinSniffer -configuration
 
 **Output**
 The report is written as pretty‑printed JSON and is compatible with OpenCore Simplify.
+
+**Pkg Install method notes**
+DarwinSniffer is installed as `sniffme`, so you can just run it from the terminal.
