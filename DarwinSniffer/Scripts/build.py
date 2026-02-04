@@ -3,7 +3,11 @@ import subprocess as sb
 import sys
 
 
-def build_darwin_sniffer(configuration: str, output_path: str | None) -> int:
+def build_darwin_sniffer(
+    configuration: str,
+    output_path: str | None,
+    universal: bool,
+) -> int:
     build_command = [
         "xcodebuild",
         "-project", "DarwinSniffer.xcodeproj",
@@ -11,6 +15,9 @@ def build_darwin_sniffer(configuration: str, output_path: str | None) -> int:
         "-configuration", configuration,
         "clean", "build",
     ]
+    if universal:
+        build_command.append("ARCHS=x86_64 arm64")
+        build_command.append("ONLY_ACTIVE_ARCH=NO")
     if output_path:
         build_command.append(f"CONFIGURATION_BUILD_DIR={output_path}")
 
@@ -42,13 +49,18 @@ def parse_args() -> argparse.Namespace:
         "--output",
         help="Override the build output directory (CONFIGURATION_BUILD_DIR).",
     )
+    parser.add_argument(
+        "--universal",
+        action="store_true",
+        help="Build a universal binary (x86_64 + arm64).",
+    )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
     configuration = "Debug" if args.debug else "Release"
-    return build_darwin_sniffer(configuration, args.output)
+    return build_darwin_sniffer(configuration, args.output, args.universal)
 
 
 if __name__ == "__main__":
