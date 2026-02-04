@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,11 +23,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		2A78C9F72F32A76C009B8062 /* DarwinSniffer */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DarwinSniffer;
-			sourceTree = "<group>";
-		};
+		2A78C9F72F32A76C009B8062 /* DarwinSniffer */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DarwinSniffer; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +44,7 @@
 				2A78C9F62F32A76C009B8062 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		2A78C9F62F32A76C009B8062 /* Products */ = {
 			isa = PBXGroup;
@@ -97,6 +94,7 @@
 				};
 			};
 			buildConfigurationList = 2A78C9F02F32A76C009B8062 /* Build configuration list for PBXProject "DarwinSniffer" */;
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -105,7 +103,6 @@
 			);
 			mainGroup = 2A78C9EC2F32A76B009B8062;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 2A78C9F62F32A76C009B8062 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,9 +241,13 @@
 		2A78C9FD2F32A76C009B8062 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development: migsufrem@gmail.com (69HG359B5K)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNQ5PP74L3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.github.oaky.darwinsniffer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -254,9 +255,13 @@
 		2A78C9FE2F32A76C009B8062 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development: migsufrem@gmail.com (69HG359B5K)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JNQ5PP74L3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.github.oaky.darwinsniffer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
