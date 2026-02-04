@@ -1,2 +1,6 @@
 Build/
 *.json
+*.pkg
+.venv
+__pycache__/
+
