@@ -1,4 +1,5 @@
 # DarwinSniffer
+[![Xcode - Build and Analyze](https://github.com/OakyMacintosh/DarwinSniffer/actions/workflows/objective-c-xcode.yml/badge.svg)](https://github.com/OakyMacintosh/DarwinSniffer/actions/workflows/objective-c-xcode.yml)
 
 DarwinSniffer is a macOS hardware detection tool that generates OpenCore Simplify compatible reports. It can print hardware details to the console and export a JSON report.
 
